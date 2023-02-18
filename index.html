@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <pre class="stats" id="stats"></pre>
+    <div class="tech-startup">
+      <div class="techText" id="ttext">tech startup</div>
+      <pre class="techArt" id="techart">
+         _________
+        / ======= \
+       / __________\
+      | ___________ |
+      | |c:\      | |
+      | |         | |
+      | |_________| |
+      \=____________/
+      / """"""""""" \
+     / ::::::::::::: \
+    (_________________)
+      </pre>
+      <button class="tech-bx1" onclick="buy(config.tech, 1, 1.1, 1)">
+        <span>x1</span>
+      </button>
+      <button class="tech-bx2" onclick="buy(config.tech, 2, 1.1, 2)">
+        <span>x2</span>
+      </button>
+      <button class="tech-bx10" onclick="buy(config.tech, 10, 1.1, 10)">
+        <span>x10</span>
+      </button>
+      <button class="tech-bx50" onclick="buy(config.tech, 50, 1.1, 50)">
+        <span>x50</span>
+      </button>
+      <button class="tech-bx100" onclick="buy(config.tech, 100, 1.1, 100)">
+        <span>x100</span>
+      </button>
+      <button class="tech-bmax" onclick="">
+        <span>max-wip</span>
+      </button>
+    </div>
+    <div class="accfirm">
+      <div class="accText" id="acctext">accounting firm</div>
+      <pre class="accArt" id="accart">
+          _.-'~~`~~'-._
+       .'`  B   E   R  `'.
+      / I               T \
+    /`       .-'~"-.       `\
+   ; L      / `-    \      Y ;
+  ;        /&gt;  `.  -.|        ;
+  |       /_     '-.__)       |
+  |        |-  _.' \ |        |
+  ;        `~~;     \\        ;
+   ;  INGODWE /      \\)P    ;
+    \  TRUST '.___.-'`"     /
+     `\                   /`
+       '._   1 9 9 7   _.'
+          `'-..,,,..-'`
+      </pre>
+      <button class="acc-bx1" onclick="buy(config.accfirm, 1, 1.15, 2)">
+        <span>x1</span>
+      </button>
+      <button class="acc-bx2" onclick="buy(config.accfirm, 2, 1.15, 4)">
+        <span>x2</span>
+      </button>
+      <button class="acc-bx10" onclick="buy(config.accfirm, 10, 1.15, 20)">
+        <span>x10</span>
+      </button>
+      <button class="acc-bx50" onclick="buy(config.accfirm, 50, 1.15, 100)">
+        <span>x50</span>
+      </button>
+      <button class="acc-bx100" onclick="buy(config.accfirm, 100, 1.15, 200)">
+        <span>x100</span>
+      </button>
+      <button class="acc-bmax" onclick="">
+        <span>max-wip</span>
+      </button>
+    </div>
+    <div class="pencilcomp">
+      <div class="pencilText" id="penciltext">pencil company</div>
+      <pre class="pencilArt" id="pencilart">
+      
+                                        ▒▒            
+                                      ▒▒░░▒▒          
+                                    ▒▒░░░░░░▒▒        
+                                  ▒▒░░░░░░░░░░▒▒      
+                                ▒▒░░░░░░░░░░░░░░▒▒    
+                              ▒▒░░▒▒░░░░░░░░░░░░░░▒▒  
+                            ░░  ▒▒░░▒▒░░░░░░░░░░░░░░▒▒
+                          ░░  ██  ▒▒░░▒▒░░░░░░░░░░▒▒  
+                        ░░  ██      ▒▒░░▒▒░░░░░░▒▒    
+                      ░░  ██      ██  ▒▒░░▒▒░░▒▒      
+                    ░░  ██      ██      ▒▒░░▒▒        
+                  ░░  ██      ██      ██  ▒▒          
+                ░░  ██      ██      ██  ░░            
+              ░░  ██      ██      ██  ░░              
+              ▒▒██      ██      ██  ░░                
+            ▒▒░░▒▒    ██      ██  ░░                  
+            ▒▒░░░░▒▒██      ██  ░░                    
+          ▒▒░░░░░░░░▒▒    ██  ░░                      
+          ▒▒░░░░░░░░░░▒▒██  ░░                        
+        ▒▒░░░░░░░░░░░░░░▒▒░░                          
+        ▒▒░░░░░░░░░░▒▒▒▒                              
+        ████░░░░▒▒▒▒                                  
+      ██████▒▒▒▒                                      
+      ████                                            
+      </pre>
+      <button class="pencil-bx1" onclick="buy(config.pencil, 1, 1.2, 3)">
+        <span>x1</span>
+      </button>
+      <button class="pencil-bx2" onclick="buy(config.pencil, 2, 1.2, 6)">
+        <span>x2</span>
+      </button>
+      <button class="pencil-bx10" onclick="buy(config.pencil, 10, 1.2, 30)">
+        <span>x10</span>
+      </button>
+      <button class="pencil-bx50" onclick="buy(config.pencil, 50, 1.2, 150)">
+        <span>x50</span>
+      </button>
+      <button class="pencil-bx100" onclick="buy(config.pencil, 100, 1.2, 300)">
+        <span>x100</span>
+      </button>
+      <button class="pencil-bmax" onclick="">
+        <span>max-wip</span>
+      </button>
+    </div>
+    <div class="bbox">
+      <div class="upgrades" id="upgrades">
+        <div class="upText">Upgrades</div>
+      </div>
+    </div>
+    <div class="autoBox">
+      <div class="progressBar" id="boxbar">
+        <div class="bar" id="techBar"></div>
+        <button class="toggleBar" onclick="toggleBar()" id="toggleBar">
+          auto: off
+        </button>
+      </div>
+    </div>
+    <button class="optBtn" onclick="options()">options</button>
+    <div class="options" id="options">
+      <button
+        onclick="localStorage.clear(); location.reload()"
+        style="position: relative; margin-top: 2px; margin-left: 2px"
+      >
+        clear storage
+      </button>
+      <button
+        onclick="dak()"
+        style="position: relative; margin-top: 2px; margin-left: 2px"
+      >
+        dark mode
+      </button>
+      <button onclick="debug()" style="position: relative; margin-top: 2px">
+        debug
+      </button>
+    </div>
+    <div class="debug" id="debug"></div>
+  </body>
+</html>
