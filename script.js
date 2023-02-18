@@ -280,7 +280,7 @@ function addUpgrade(id, price, name) {
   text.style.marginTop = "5px";
   text.style.textAlign = "center";
   textBox.style.height = "30px";
-  textBox.style.width = "296px";
+  textBox.style.width = "286px";
   textBox.style.marginTop = "4px";
   textBox.style.marginLeft = "2px";
   textBox.style.outline = "solid 1px grey";
