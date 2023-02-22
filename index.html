@@ -20,7 +20,7 @@
       | |_________| |
       \=____________/
       / """"""""""" \
-     / ::::::::::::: \ :)
+     / ::::::::::::: \
     (_________________)
       </pre>
       <button class="tech-bx1" onclick="buy(config.tech, 1, 1.1, 1)">
@@ -83,30 +83,30 @@
       <div class="pencilText" id="penciltext">pencil company</div>
       <pre class="pencilArt" id="pencilart">
       
-                                        ▒▒            
-                                      ▒▒░░▒▒          
-                                    ▒▒░░░░░░▒▒        
-                                  ▒▒░░░░░░░░░░▒▒      
-                                ▒▒░░░░░░░░░░░░░░▒▒    
-                              ▒▒░░▒▒░░░░░░░░░░░░░░▒▒  
-                            ░░  ▒▒░░▒▒░░░░░░░░░░░░░░▒▒
-                          ░░  ██  ▒▒░░▒▒░░░░░░░░░░▒▒  
-                        ░░  ██      ▒▒░░▒▒░░░░░░▒▒    
-                      ░░  ██      ██  ▒▒░░▒▒░░▒▒      
-                    ░░  ██      ██      ▒▒░░▒▒        
-                  ░░  ██      ██      ██  ▒▒          
-                ░░  ██      ██      ██  ░░            
-              ░░  ██      ██      ██  ░░              
-              ▒▒██      ██      ██  ░░                
-            ▒▒░░▒▒    ██      ██  ░░                  
-            ▒▒░░░░▒▒██      ██  ░░                    
-          ▒▒░░░░░░░░▒▒    ██  ░░                      
-          ▒▒░░░░░░░░░░▒▒██  ░░                        
-        ▒▒░░░░░░░░░░░░░░▒▒░░                          
-        ▒▒░░░░░░░░░░▒▒▒▒                              
-        ████░░░░▒▒▒▒                                  
-      ██████▒▒▒▒                                      
-      ████                                            
+                                                ▒▒            
+                                              ▒▒░░▒▒          
+                                            ▒▒░░░░░░▒▒        
+                                          ▒▒░░░░░░░░░░▒▒      
+                                        ▒▒░░░░░░░░░░░░░░▒▒    
+                                      ▒▒░░▒▒░░░░░░░░░░░░░░▒▒  
+                                    ░░  ▒▒░░▒▒░░░░░░░░░░░░░░▒▒
+                                  ░░  ██  ▒▒░░▒▒░░░░░░░░░░▒▒  
+                                ░░  ██      ▒▒░░▒▒░░░░░░▒▒    
+                              ░░  ██      ██  ▒▒░░▒▒░░▒▒      
+                            ░░  ██      ██      ▒▒░░▒▒        
+                          ░░  ██      ██      ██  ▒▒          
+                        ░░  ██      ██      ██  ░░            
+                      ░░  ██      ██      ██  ░░              
+                      ▒▒██      ██      ██  ░░                
+                    ▒▒░░▒▒    ██      ██  ░░                  
+                    ▒▒░░░░▒▒██      ██  ░░                    
+                  ▒▒░░░░░░░░▒▒    ██  ░░                      
+                  ▒▒░░░░░░░░░░▒▒██  ░░                        
+                ▒▒░░░░░░░░░░░░░░▒▒░░                          
+                ▒▒░░░░░░░░░░▒▒▒▒                              
+                ████░░░░▒▒▒▒                                  
+              ██████▒▒▒▒                                      
+              ████                                            
       </pre>
       <button class="pencil-bx1" onclick="buy(config.pencil, 1, 1.2, 3)">
         <span>x1</span>
@@ -128,16 +128,16 @@
       </button>
     </div>
     <div class="bbox">
+      <div class="autoBox">
+        <div class="progressBar" id="boxbar">
+          <div class="bar" id="techBar"></div>
+          <button class="toggleBar" onclick="toggleBar()" id="toggleBar">
+            auto: off
+          </button>
+        </div>
+      </div>
       <div class="upgrades" id="upgrades">
         <div class="upText">Upgrades</div>
-      </div>
-    </div>
-    <div class="autoBox">
-      <div class="progressBar" id="boxbar">
-        <div class="bar" id="techBar"></div>
-        <button class="toggleBar" onclick="toggleBar()" id="toggleBar">
-          auto: off
-        </button>
       </div>
     </div>
     <button class="optBtn" onclick="options()">options</button>

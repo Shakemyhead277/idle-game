@@ -1,478 +1,478 @@
 :root {
-    --color: white;
-    --color2: grey;
-    --color3: black;
-    --costx1: "10";
-    --costx2: "10";
-    --costx10: "10";
-    --costx50: "10";
-    --costx100: "10";
-    --costmax: "10";
-    --costx11: "50";
-    --costx21: "50";
-    --costx101: "50";
-    --costx501: "50";
-    --costx1001: "50";
-    --costmax1: "50";
-    --costx12: "100";
-    --costx22: "100";
-    --costx102: "100";
-    --costx502: "100";
-    --costx1002: "100";
-    --costmax2: "100";
+  --color: white;
+  --color2: grey;
+  --color3: black;
+  --costx1: "10";
+  --costx2: "10";
+  --costx10: "10";
+  --costx50: "10";
+  --costx100: "10";
+  --costmax: "10";
+  --costx11: "50";
+  --costx21: "50";
+  --costx101: "50";
+  --costx501: "50";
+  --costx1001: "50";
+  --costmax1: "50";
+  --costx12: "100";
+  --costx22: "100";
+  --costx102: "100";
+  --costx502: "100";
+  --costx1002: "100";
+  --costmax2: "100";
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
   }
-  
-  @keyframes fill {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
-  body {
-    background-color: var(--color);
-  }
-  
-  .debug {
-    height: 0px;
-    width: 200px;
-    position: absolute;
-    right: 4px;
-    top: 4px;
-  }
-  
-  .stats {
-    width: 100px;
-    color: var(--color3);
-    height: 50px;
-    outline: solid 1px var(--color2);
-    margin-bottom: 9px;
-  }
-  
-  .bbox {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    width: 75%;
-    color: var(--color3);
-    height: 150px;
-    outline: solid 1px var(--color2);
-  }
-  
-  .upgrades {
-    width: 300px;
-    height: 134px;
-    overflow: scroll;
-    float: right;
-    margin-right: 7px;
-    margin-top: 7px;
-    color: var(--color3);
-    outline: solid 1px var(--color2);
-  }
-  
-  .upText {
-    height: 25px;
-    text-align: center;
-    margin-bottom: 2px;
-    outline: solid 1px var(--color2);
+  100% {
     width: 100%;
   }
-  
-  .options {
-    position: absolute;
-    right: 5px;
-    bottom: 27px;
-    color: var(--color3);
-    width: 150px;
-    height: 100px;
-    outline: solid 1px grey;
-    visibility: hidden;
-  }
-  
-  .optBtn {
-    position: absolute;
-    right: 2px;
-    bottom: 2px;
-  }
-  
-  .progressBar {
-    position: relative;
-    margin-top: 2px;
-    color: var(--color3);
-    margin-left: 2px;
-    width: 296px;
-    height: 25px;
-    outline: solid 1px var(--color2);
-    font-size: 25px;
-  }
-  
-  .autoBox {
-    position: absolute;
-    left: 115px;
-    top: 3px;
-    color: var(--color3);
-    width: 300px;
-    height: 59px;
-    outline: solid 1px var(--color2);
-  }
-  
-  .bar {
-    height: 25px;
-    width: 0px;
-    color: var(--color3);
-    background-color: var(--color2);
-  }
-  
-  .tech-startup {
-    width: 250px;
-    color: var(--color3);
-    height: 250px;
-    outline: solid 1px var(--color2);
-  }
-  
-  .accfirm {
-    position: absolute;
-    left: 265px;
-    top: 63px;
-    width: 250px;
-    margin-top: 9px;
-    color: var(--color3);
-    height: 250px;
-    outline: solid 1px var(--color2);
-  }
-  
-  .pencilcomp {
-    position: absolute;
-    left: 523px;
-    top: 63px;
-    width: 250px;
-    margin-top: 9px;
-    color: var(--color3);
-    height: 250px;
-    outline: solid 1px var(--color2);
-  }
-  
-  .toggleBar {
-    position: relative;
-    width: 296px;
-    height: 25px;
-  }
-  
-  .techText {
-    position: relative;
-    margin: auto;
-    color: var(--color3);
-    text-align: center;
-    width: 200px;
-    height: 15px;
-  }
-  
-  .accText {
-    position: relative;
-    margin: auto;
-    color: var(--color3);
-    text-align: center;
-    width: 200px;
-    height: 15px;
-  }
-  
-  .pencilText {
-    position: relative;
-    margin: auto;
-    color: var(--color3);
-    text-align: center;
-    width: 200px;
-    height: 15px;
-  }
-  
-  .techArt {
-    margin: auto;
-    width: 90%;
-    height: 68%;
-  }
-  
-  .accArt {
-    margin: auto;
-    width: 90%;
-    height: 68%;
-    font-size: 11px;
-    color: gray;
-  }
-  
-  .pencilArt {
-    margin: auto;
-    width: 90%;
-    height: 68%;
-    font-size: 6px;
-    color: gray;
-  }
-  
-  .tech-bx1 {
-    margin-top: 5px;
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bx1:hover span {
-    display: none;
-  }
-  
-  .tech-bx1:hover:after {
-    content: var(--costx1);
-  }
-  .tech-bx2 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bx2:hover span {
-    display: none;
-  }
-  
-  .tech-bx2:hover:after {
-    content: var(--costx2);
-  }
-  .tech-bx10 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bx10:hover span {
-    display: none;
-  }
-  
-  .tech-bx10:hover:after {
-    content: var(--costx10);
-  }
-  .tech-bx50 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bx50:hover span {
-    display: none;
-  }
-  
-  .tech-bx50:hover:after {
-    content: var(--costx50);
-  }
-  .tech-bx100 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bx100:hover span {
-    display: none;
-  }
-  
-  .tech-bx100:hover:after {
-    content: var(--costx100);
-  }
-  .tech-bmax {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .tech-bmax:hover span {
-    display: none;
-  }
-  
-  .tech-bmax:hover:after {
-    content: var(--costmax);
-  }
-  
-  .acc-bx1 {
-    margin-top: 5px;
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bx1:hover span {
-    display: none;
-  }
-  
-  .acc-bx1:hover:after {
-    content: var(--costx11);
-  }
-  .acc-bx2 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bx2:hover span {
-    display: none;
-  }
-  
-  .acc-bx2:hover:after {
-    content: var(--costx21);
-  }
-  .acc-bx10 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bx10:hover span {
-    display: none;
-  }
-  
-  .acc-bx10:hover:after {
-    content: var(--costx101);
-  }
-  .acc-bx50 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bx50:hover span {
-    display: none;
-  }
-  
-  .acc-bx50:hover:after {
-    content: var(--costx501);
-  }
-  .acc-bx100 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bx100:hover span {
-    display: none;
-  }
-  
-  .acc-bx100:hover:after {
-    content: var(--costx1001);
-  }
-  .acc-bmax {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .acc-bmax:hover span {
-    display: none;
-  }
-  
-  .acc-bmax:hover:after {
-    content: var(--costmax1);
-  }
-  
-  .pencil-bx1 {
-    margin-top: 5px;
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bx1:hover span {
-    display: none;
-  }
-  
-  .pencil-bx1:hover:after {
-    content: var(--costx12);
-  }
-  .pencil-bx2 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bx2:hover span {
-    display: none;
-  }
-  
-  .pencil-bx2:hover:after {
-    content: var(--costx22);
-  }
-  .pencil-bx10 {
-    left: 6.25px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bx10:hover span {
-    display: none;
-  }
-  
-  .pencil-bx10:hover:after {
-    content: var(--costx102);
-  }
-  .pencil-bx50 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bx50:hover span {
-    display: none;
-  }
-  
-  .pencil-bx50:hover:after {
-    content: var(--costx502);
-  }
-  .pencil-bx100 {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bx100:hover span {
-    display: none;
-  }
-  
-  .pencil-bx100:hover:after {
-    content: var(--costx1002);
-  }
-  .pencil-bmax {
-    left: 6.25px;
-    top: 2.5px;
-    position: relative;
-    width: 75px;
-    height: 25px;
-  }
-  
-  .pencil-bmax:hover span {
-    display: none;
-  }
-  
-  .pencil-bmax:hover:after {
-    content: var(--costmax2);
-  }
-  
+}
+
+body {
+  background-color: var(--color);
+  background-size: 5%;
+}
+
+.debug {
+  height: 0px;
+  width: 200px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.stats {
+  width: 100px;
+  color: var(--color3);
+  height: 50px;
+  outline: solid 1px var(--color2);
+  margin-bottom: 9px;
+}
+
+.bbox {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 75%;
+  color: var(--color3);
+  height: 150px;
+  outline: solid 1px var(--color2);
+}
+
+.upgrades {
+  width: 300px;
+  height: 134px;
+  float: right;
+  overflow: hidden;
+  margin-right: 7px;
+  margin-top: 7px;
+  color: var(--color3);
+  outline: solid 1px var(--color2);
+}
+
+.upText {
+  height: 25px;
+  text-align: center;
+  margin-bottom: 2px;
+  outline: solid 1px var(--color2);
+  width: 100%;
+}
+
+.options {
+  position: absolute;
+  right: 5px;
+  bottom: 27px;
+  color: var(--color3);
+  width: 150px;
+  height: 100px;
+  outline: solid 1px grey;
+  visibility: hidden;
+}
+
+.optBtn {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+
+.progressBar {
+  position: relative;
+  margin-top: 2px;
+  color: var(--color3);
+  margin-left: 2px;
+  width: 296px;
+  height: 25px;
+  outline: solid 1px var(--color2);
+  font-size: 25px;
+}
+
+.autoBox {
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 3px;
+  color: var(--color3);
+  width: 300px;
+  height: 59px;
+  outline: solid 1px var(--color2);
+}
+
+.bar {
+  height: 25px;
+  width: 0px;
+  color: var(--color3);
+  background-color: var(--color2);
+}
+
+.tech-startup {
+  width: 250px;
+  color: var(--color3);
+  height: 250px;
+  outline: solid 1px var(--color2);
+}
+
+.accfirm {
+  position: absolute;
+  left: 265px;
+  top: 63px;
+  width: 250px;
+  margin-top: 9px;
+  color: var(--color3);
+  height: 250px;
+  outline: solid 1px var(--color2);
+}
+
+.pencilcomp {
+  position: absolute;
+  left: 523px;
+  top: 63px;
+  width: 250px;
+  margin-top: 9px;
+  color: var(--color3);
+  height: 250px;
+  outline: solid 1px var(--color2);
+}
+
+.toggleBar {
+  position: relative;
+  width: 296px;
+  height: 25px;
+}
+
+.techText {
+  position: relative;
+  margin: auto;
+  color: var(--color3);
+  text-align: center;
+  width: 200px;
+  height: 15px;
+}
+
+.accText {
+  position: relative;
+  margin: auto;
+  color: var(--color3);
+  text-align: center;
+  width: 200px;
+  height: 15px;
+}
+
+.pencilText {
+  position: relative;
+  margin: auto;
+  color: var(--color3);
+  text-align: center;
+  width: 200px;
+  height: 15px;
+}
+
+.techArt {
+  margin: auto;
+  width: 90%;
+  height: 68%;
+}
+
+.accArt {
+  margin: auto;
+  width: 90%;
+  height: 68%;
+  font-size: 11px;
+  color: gray;
+}
+
+.pencilArt {
+  margin: auto;
+  width: 90%;
+  height: 68%;
+  font-size: 5px;
+  color: gray;
+}
+
+.tech-bx1 {
+  margin-top: 5px;
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bx1:hover span {
+  display: none;
+}
+
+.tech-bx1:hover:after {
+  content: var(--costx1);
+}
+.tech-bx2 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bx2:hover span {
+  display: none;
+}
+
+.tech-bx2:hover:after {
+  content: var(--costx2);
+}
+.tech-bx10 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bx10:hover span {
+  display: none;
+}
+
+.tech-bx10:hover:after {
+  content: var(--costx10);
+}
+.tech-bx50 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bx50:hover span {
+  display: none;
+}
+
+.tech-bx50:hover:after {
+  content: var(--costx50);
+}
+.tech-bx100 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bx100:hover span {
+  display: none;
+}
+
+.tech-bx100:hover:after {
+  content: var(--costx100);
+}
+.tech-bmax {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.tech-bmax:hover span {
+  display: none;
+}
+
+.tech-bmax:hover:after {
+  content: var(--costmax);
+}
+
+.acc-bx1 {
+  margin-top: 5px;
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bx1:hover span {
+  display: none;
+}
+
+.acc-bx1:hover:after {
+  content: var(--costx11);
+}
+.acc-bx2 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bx2:hover span {
+  display: none;
+}
+
+.acc-bx2:hover:after {
+  content: var(--costx21);
+}
+.acc-bx10 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bx10:hover span {
+  display: none;
+}
+
+.acc-bx10:hover:after {
+  content: var(--costx101);
+}
+.acc-bx50 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bx50:hover span {
+  display: none;
+}
+
+.acc-bx50:hover:after {
+  content: var(--costx501);
+}
+.acc-bx100 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bx100:hover span {
+  display: none;
+}
+
+.acc-bx100:hover:after {
+  content: var(--costx1001);
+}
+.acc-bmax {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.acc-bmax:hover span {
+  display: none;
+}
+
+.acc-bmax:hover:after {
+  content: var(--costmax1);
+}
+
+.pencil-bx1 {
+  margin-top: 5px;
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bx1:hover span {
+  display: none;
+}
+
+.pencil-bx1:hover:after {
+  content: var(--costx12);
+}
+.pencil-bx2 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bx2:hover span {
+  display: none;
+}
+
+.pencil-bx2:hover:after {
+  content: var(--costx22);
+}
+.pencil-bx10 {
+  left: 6.25px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bx10:hover span {
+  display: none;
+}
+
+.pencil-bx10:hover:after {
+  content: var(--costx102);
+}
+.pencil-bx50 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bx50:hover span {
+  display: none;
+}
+
+.pencil-bx50:hover:after {
+  content: var(--costx502);
+}
+.pencil-bx100 {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bx100:hover span {
+  display: none;
+}
+
+.pencil-bx100:hover:after {
+  content: var(--costx1002);
+}
+.pencil-bmax {
+  left: 6.25px;
+  top: 2.5px;
+  position: relative;
+  width: 75px;
+  height: 25px;
+}
+
+.pencil-bmax:hover span {
+  display: none;
+}
+
+.pencil-bmax:hover:after {
+  content: var(--costmax2);
+}

@@ -26,6 +26,7 @@ let config = {
   cps: 1,
   dark: false,
   time: 1,
+  memery: false,
   tech: [/*cost*/ 10, /*level*/ 1],
   accfirm: [/*cost*/ 50, /*level*/ 0],
   pencil: [/*cost*/ 75, /*level*/ 0],
@@ -41,9 +42,12 @@ function getLength(num) {
 function dak() {
   if (config.dark) {
     config.dark = false;
+    console.log('turning off')
   } else {
     config.dark = true;
+    console.log('turning on')
   }
+  save()
   setVals();
 }
 
@@ -92,7 +96,7 @@ function toggleBar() {
 function getCost(item, amount, multi) {
   let aftAmt = item;
   for (let i = 0; i < amount - 1; i++) {
-    aftAmt = aftAmt + aftAmt * multi;
+    aftAmt = (aftAmt + (aftAmt / 7)) * amount;
   }
   return expo(Math.floor(aftAmt));
 }
@@ -102,6 +106,9 @@ function save() {
 }
 
 function setVals() {
+  if (config.memery) {
+    document.body.style.backgroundImage = "url('https://ichef.bbci.co.uk/news/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg')"
+  }
   root.style.setProperty("--costx1", "'" + expo(config.tech[0]) + "'");
   root.style.setProperty(
     "--costx2",
@@ -210,7 +217,6 @@ function add() {
       out.offsetHeight;
       out.style.animation = null;
       config.coins = config.coins + config.cps;
-      console.log(config.coins + config.cps);
       stats.innerHTML =
         "coins: " + expo(config.coins) + "\nCps: " + expo(config.cps);
       save();
@@ -270,17 +276,18 @@ function debug() {
   }
 }
 
-function addUpgrade(id, price, name) {
-  const button = document.createElement("button");
+function addUpgrade(id, price, name, command) {
   const textBox = document.createElement("div");
   const text = document.createElement("div");
+  const button = document.createElement("button");
+  textBox.id = id;
   text.innerHTML = name;
   text.style.position = "absolute";
   text.style.width = "242px";
   text.style.marginTop = "5px";
   text.style.textAlign = "center";
   textBox.style.height = "30px";
-  textBox.style.width = "286px";
+  textBox.style.width = "296px";
   textBox.style.marginTop = "4px";
   textBox.style.marginLeft = "2px";
   textBox.style.outline = "solid 1px grey";
@@ -298,10 +305,30 @@ function addUpgrade(id, price, name) {
     button.innerHTML = "unlock";
   });
   button.addEventListener("click", function () {
-    if (id === "Aspeed") {
-      config.time = config.time / 2;
+    if (config.coins - price >= 0) {
+      config.coins = config.coins - price;
+      eval(command)
+      config.upgrades.push(id)
+      textBox.remove()
+      save()
+      setVals()
     }
   });
 }
 
-addUpgrade("Aspeed", 10000, "auto speed ÷ 2");
+function addUps() {
+  let items = [
+    ["Aspeed", 1000, "auto speed ÷ 2", "config.time = config.time / 2;"], 
+    ["doubleCPS", 5000, "double your cps", "config.cps = config.cps * 2;"], 
+    ["memery", 10000, "memery", "config.memery = true"]
+  ]
+  items.forEach(element => addUpgrade(element[0], element[1], element[2], element[3]))
+}
+
+addUps()
+
+function setUps() {
+  config.upgrades.forEach(element => document.getElementById(element).remove())
+}
+
+setUps()
